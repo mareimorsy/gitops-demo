@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,7 +20,7 @@ spec:
         app: hello-app
     spec:
       containers:
-      - image: mareimorsy/hello-app:prod-1
+      - image: mareimorsy/hello-app:prod-2
         imagePullPolicy: IfNotPresent
         name: hello-app
         ports:
