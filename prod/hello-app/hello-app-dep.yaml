@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: 'true'
-    flux.weave.works/tag.hello-world: glob:prod-*
+    flux.weave.works/tag.hello-app: glob:prod-*
   labels:
     app: hello-app
   name: hello-app
