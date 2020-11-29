@@ -16,11 +16,8 @@ spec:
         app: hello-app
     spec:
       containers:
-      - envFrom:
-        - configMapRef:
-            name: hello-app
-        image: mareimorsy/hello-app:prod-1
-        imagePullPolicy: Always
+      - image: mareimorsy/hello-app:prod-1
+        imagePullPolicy: IfNotPresent
         name: hello-app
         ports:
         - containerPort: 3000
