@@ -1,1 +1,1 @@
-# gitops-demo
+# Welcome to GitOps Demo!
