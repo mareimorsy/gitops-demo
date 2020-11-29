@@ -20,7 +20,7 @@ spec:
         app: hello-app
     spec:
       containers:
-      - image: mareimorsy/hello-app:prod-2
+      - image: mareimorsy/hello-app:prod-3
         imagePullPolicy: IfNotPresent
         name: hello-app
         ports:
