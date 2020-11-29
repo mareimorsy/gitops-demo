@@ -1,6 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  annotations:
+    flux.weave.works/automated: 'true'
+    flux.weave.works/tag.hello-world: glob:prod-*
   labels:
     app: hello-app
   name: hello-app
