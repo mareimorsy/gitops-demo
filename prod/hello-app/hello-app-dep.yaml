@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-app
+  name: hello-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-app
+  template:
+    metadata:
+      labels:
+        app: hello-app
+    spec:
+      containers:
+      - envFrom:
+        - configMapRef:
+            name: hello-app
+        image: mareimorsy/hello-app:prod-1
+        imagePullPolicy: Always
+        name: hello-app
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        resources: {}
